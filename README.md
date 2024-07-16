@@ -135,6 +135,7 @@ Shortcut for `\productionstar`.
 Including images with an optional width parameter.
 
 ```latex
+\img{path/to/image} % includes image with default 100% of text width
 \img[0.5]{path/to/image} % includes image with 50% of text width
 ```
 
@@ -165,6 +166,34 @@ Text highlighting with different colors.
 
 ```latex
 \hlorange{Orange highlighted text}
+```
+## Highlight Block Commands
+
+Highlight entire blocks of text with different colors.
+
+### `\hlb`
+
+```latex
+\hlb{Your highlighted block text here.} % default yellow background
+\hlb[green!30]{Your highlighted block text here.} % green background
+```
+
+### `\hlbgreen`
+
+```latex
+\hlbgreen{Your green highlighted block text here.}
+```
+
+### `\hlbyellow`
+
+```latex
+\hlbyellow{Your yellow highlighted block text here.}
+```
+
+### `\hlborange`
+
+```latex
+\hlborange{Your orange highlighted block text here.}
 ```
 
 ## Additional Section Depth

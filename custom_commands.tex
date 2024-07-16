@@ -1,6 +1,6 @@
 % Custom LaTeX Commands by Gilian Rehm
 
-% Required packages for custom commands and environments
+% Required packages: for custom commands and environments
 \usepackage[dvipsnames]{xcolor}    % For colored text and boxes
 \usepackage{tcolorbox}             % For colored boxes
 \usepackage{graphicx}              % For including images
@@ -62,6 +62,17 @@
 \newcommand{\hlgreen}[1]{\hl[green!30]{#1}}
 \newcommand{\hlyellow}[1]{\hl[yellow!30]{#1}}
 \newcommand{\hlorange}[1]{\hl[orange!30]{#1}}
+
+% Highlight block commands: for highlighting entire blocks of text
+\NewDocumentEnvironment{hlb}{O{yellow!30} m}{
+  \begin{tcolorbox}[colback=#1, colframe=#1, boxrule=0pt]
+    #2
+  \end{tcolorbox}
+}
+
+\newcommand{\hlbgreen}[1]{\hlb[green!30]{#1}}
+\newcommand{\hlbyellow}[1]{\hlb[yellow!30]{#1}}
+\newcommand{\hlborange}[1]{\hlb[orange!30]{#1}}
 
 % Additional Section Depth: deeper sectioning levels
 \newcommand{\subsubsubsection}[1]{\paragraph{#1}\mbox{}\\}
